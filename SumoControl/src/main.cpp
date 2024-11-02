@@ -10,10 +10,10 @@ void setup(){
 }
 
 void loop(){
-    while (Serial.avaible() > 0){
+    while (Serial.available() > 0){
         char data[1];
         data[0] = Serial.read();
-        vw_send((uiny8_t*)data,sizeof(data));
+        vw_send((uint8_t*)data,sizeof(data));
         vw_wait_tx();
     }
     delay(200);
